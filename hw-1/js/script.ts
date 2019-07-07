@@ -7,6 +7,11 @@ let typeUndefined: undefined = undefined;
 // factorial
 
 function factorial(n:number):number {
+    if(n <= 0) {
+        console.log('Wrong number');
+        return 0;
+    }
+
     return (n != 1) ? n * factorial(n - 1) : 1;
 }
 const factorialResult = factorial(5);
@@ -15,7 +20,11 @@ console.log(`factorial -> ${factorialResult}`);
 // fibonacci
 
 function fibonacci (n:number):Array<number> {
-    let i: number;
+    if(n <= 0) {
+        console.log('Wrong number');
+        return [];
+    }
+
     let fibonacciArray: number[] = new Array(n);
 
     switch (n) {
@@ -27,7 +36,7 @@ function fibonacci (n:number):Array<number> {
             break;
         default:
             fibonacciArray[0] = fibonacciArray[1] = 1;
-            for (i = 2; i < n; i++) {
+            for (let i:number = 2; i < n; i++) {
                 fibonacciArray[i] = fibonacciArray[i-1] + fibonacciArray[i-2];
             }
             break;
