@@ -11,7 +11,7 @@ function factorial(n) {
     }
     return (n != 1) ? n * factorial(n - 1) : 1;
 }
-var factorialResult = factorial(0);
+var factorialResult = factorial(5);
 console.log("factorial -> " + factorialResult);
 // fibonacci
 function fibonacci(n) {
@@ -36,5 +36,5 @@ function fibonacci(n) {
     }
     return fibonacciArray;
 }
-var fibonacciResult = fibonacci(-7);
+var fibonacciResult = fibonacci(7);
 console.log("fibonacci -> " + fibonacciResult);
