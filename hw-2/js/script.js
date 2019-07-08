@@ -42,9 +42,11 @@ var ToHexidecimal = /** @class */ (function () {
     return ToHexidecimal;
 }());
 var binary = new ToBinary();
-console.log(binary.toSystem(255));
-console.log(binary.fromSystem('1001'));
+console.log('from Decimal to Binary -> ', binary.toSystem(255));
+console.log('from Binary to Decimal -> ', binary.fromSystem('1001'));
 var hexal = new ToHexal();
-console.log(hexal.toSystem(255));
+console.log('from Decimal to Hexal -> ', hexal.toSystem(255));
+console.log('from Hexal to Decimal -> ', hexal.fromSystem('16'));
 var hexidecimal = new ToHexidecimal();
-console.log(hexidecimal.toSystem(255));
+console.log('from Decimal to Hexidecimal -> ', hexidecimal.toSystem(255));
+console.log('from Hexidecimal to Decimal -> ', hexidecimal.fromSystem('f'));
