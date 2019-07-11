@@ -1,23 +1,26 @@
-var User = (function () {
-    function User() {
-    }
-    User.prototype.AddYearOfLife = function () {
-    };
-    User.prototype.AddAchvement = function (achevemnt) {
-        this.achivments = this.achivments.push(achevemnt);
-    };
-    return User;
-}());
-var Achivement = (function () {
-    function Achivement() {
-    }
-    return Achivement;
-}());
+// Домашнее задание:
+// Создать класс User у которого будут поля name, age, achivments
+// Клaссу User добавить следующее методы AddYearOfLife(), AddAchvement(achevemnt);
+// Создать класс Achivement в котором будут следующие поля type, heroical, description
+// Поместить данные класс в неймспейс SuperHero
+// Создать инстансты классов - SpiderMan и IronMan
+// + Создать базовые интерфейсы для классов User и Achivement.
 var SuperHero;
 (function (SuperHero) {
-    var User = (function () {
-        function User() {
+    var Achivement = /** @class */ (function () {
+        function Achivement() {
         }
+        return Achivement;
+    }());
+    SuperHero.Achivement = Achivement;
+    var User = /** @class */ (function () {
+        function User() {
+            this.achivments = [];
+        }
+        User.prototype.AddYearOfLife = function () { };
+        User.prototype.AddAchvement = function (achevemnt) {
+            this.achivments.push(achevemnt);
+        };
         return User;
     }());
     SuperHero.User = User;
@@ -37,17 +40,16 @@ var achivment3 = {
     heroical: '333',
     description: '333'
 };
-var SpiderMan = new SuperHero();
-SpiderMan.name = 'SpiderMan';
+var SpiderMan = new SuperHero.User();
+SpiderMan.name = 'Peter Benjamin Parker';
 SpiderMan.age = 18;
 SpiderMan.AddAchvement(achivment1);
+SpiderMan.AddAchvement(achivment3);
 console.log(SpiderMan);
-// Домашнее задание:
-//
-// Создать класс User у которого будут поля name, age, achivments
-// Клaссу User добавить следующее методы AddYearOfLife(), AddAchvement(achevemnt);
-// Создать класс Achivement в котором будут следующие поля type, heroical, description
-// Поместить данные класс в неймспейс SuperHero
-//
-// Создать инстансты классов - SpiderMan и IronMan
-// + Создать базовые интерфейсы для классов User и Achivement. 
+var IronMan = new SuperHero.User();
+IronMan.name = 'Anthony Edward "Tony" Stark';
+IronMan.age = 54;
+IronMan.AddAchvement(achivment1);
+IronMan.AddAchvement(achivment2);
+IronMan.AddAchvement(achivment3);
+console.log(IronMan);
