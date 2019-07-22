@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row section-gallery">
+    <div class="col-4" *ngFor="let item of gallery">
+      <div class="card">
+        <img src="{{item.url}}"
+             class="card-img-top"
+             alt="">
+        <div class="card-body">
+          <h5 class="card-title">{{item.title}}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
