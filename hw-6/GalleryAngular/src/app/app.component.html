@@ -1,0 +1,10 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <app-selected-image [selectImageUrl]="selectImageUrl"></app-selected-image>
+  <app-gallery [gallery]="gallery" (selectImage)="advancedClick($event)"></app-gallery>
+  <h5></h5>
+</div>
+

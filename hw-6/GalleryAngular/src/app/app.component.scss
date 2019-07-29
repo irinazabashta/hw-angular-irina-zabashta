@@ -1,0 +1,11 @@
+.section-gallery{
+    & > div{
+        padding-bottom: 30px;
+    }
+}
+.card{
+    height: 100%;
+}
+.selected-image{
+    margin-bottom: 30px;
+}
