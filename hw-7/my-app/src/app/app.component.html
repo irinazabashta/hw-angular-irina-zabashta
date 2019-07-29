@@ -1,0 +1,17 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1>Welcome to {{ title }}!</h1>
+        <div class="form-group">
+          <label for="morse">Type your message here, use only English letters.</label>
+          <input id="morse" class="form-control" type="text" [(ngModel)]="textToMorse">
+        </div>
+        <h2 class="pb-2 mb-2 text-white bg-dark">{{textToMorse | morse }}</h2>
+        <app-clock></app-clock>
+      </div>
+    </div>
+  </div>
+
+</div>
