@@ -1,0 +1,15 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+
+  <span style="color:red;" *ngIf="message">{{message}}</span>
+  <input #file type="file" accept='image/*' (change)="preview(file.files)" />
+  <img [src]="imgURL" height="200" *ngIf="imgURL">
+
+  <app-selected-image [selectImageUrl]="selectImageUrl"></app-selected-image>
+  <app-gallery [gallery]="gallery" (selectImage)="advancedClick($event)"></app-gallery>
+  <h5></h5>
+</div>
+
